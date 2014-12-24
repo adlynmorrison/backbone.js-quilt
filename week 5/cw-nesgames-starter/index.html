@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NES Games</title>
+
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.4.2/base-min.css">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.4.2/forms-nr-min.css">
+  <link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+    /* DON'T COPY ANY OF THIS CSS!
+
+    It's sloppy and quick - we're learning JavaScript here!
+    */
+    html, body {
+      height: 100%;
+      background: #47819f;
+    }
+
+    dl {
+      width: 100%;
+      overflow: hidden;
+      line-height: 1.6;
+    }
+
+    dl:after {
+      clear: both;
+      display: table;
+      content: '';
+    }
+
+    dt {
+      margin: 0;
+      padding: 0;
+      float: left;
+      width: 30%;
+      font-weight: bold;
+    }
+
+    dd {
+      margin: 0;
+      padding: 0;
+      float: left;
+      width: 70%; /* adjust the width; make sure the total of both is 100% */
+    }
+
+    .container {
+      width: 960px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .page-title {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Holtwood One SC', serif;
+    }
+
+    .data-loading {
+      float: right;
+      background: url(loader.gif);
+      width: 100px;
+      height: 13px;
+      margin-top: 8px;
+      display: none;
+    }
+
+    .page-header {
+      margin-bottom: 20px;
+    }
+
+    #game-display {
+      display: none;
+    }
+
+    #game-display:after {
+      clear: both;
+      display: table;
+      content: '';
+    }
+
+    #game-art {
+      float: left;
+      width: 460px;
+      margin-right: 40px;
+    }
+
+    #game-art img {
+      width: 100%;
+    }
+
+    #game-description-related {
+      float: left;
+      width: 460px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header class="page-header">
+    <h1 class="page-title">Oohh, NES Games</h1>
+    <form class="pure-form">
+      <label for="game-select">Select a game: </label>
+      <select id="game-select"></select>
+      <span class="data-loading" id="game-loading"></span>
+    </form>
+  </header>
+
+  <main role="main" id="game-display">
+    <figure id="game-art">
+      <img id="game-image">
+    </figure>
+    <section id="game-description-related">
+      <h1 id="game-title"></h1>
+      <div id="game-description"></div>
+
+      <dl>
+        <dt>Release Year</dt>
+        <dd id="game-year"></dd>
+        <dt>Publisher</dt>
+        <dd id="game-publisher"></dd>
+      </dl>
+
+      <h3>Other games by this publisher</h3>
+      <ul id="related-games"></ul>
+    </div>
+  </main>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

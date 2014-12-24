@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switchin' Themes</title>
+
+	<link rel="stylesheet" type="text/css" href="https://raw2.github.com/necolas/normalize.css/master/normalize.css">
+	<link href='http://fonts.googleapis.com/css?family=Freckle+Face|Duru+Sans' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+		/* apply a natural box layout model to all elements */
+		*, *:before, *:after {
+			-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			background: #E05056;
+		}
+
+		html {
+			font-size: 62.5%;
+		}
+
+		body {
+			font-size: 1.6rem; /* 16px */
+			font-family: 'Duru Sans', sans-serif;
+			line-height: 150%;
+		}
+
+		.site-header {
+			background: #1BA6A8;
+			position: relative;
+			box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+		}
+
+		.site-content {
+			background: #3B395B;
+		}
+
+		.container {
+			margin: 0 auto;
+			width: 500px;
+			padding: 20px;
+			color: #fff;
+		}
+
+		.clearfix:after {
+			display: table;
+			content: '';
+			clear: both;
+		}
+
+		a {
+			color: #fff;
+			font-weight: 800;
+			text-decoration: none;
+		}
+
+		.h1 {
+			font-family: 'Freckle Face', cursive;
+			text-transform: uppercase;
+			font-size: 4.2rem;
+			text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.4);
+			transition: all 0.2s ease;
+		}
+
+		.h1:hover {
+			-webkit-transform: rotate(-5deg);
+			-moz-transform: rotate(-5deg);
+			transform: rotate(-5deg);
+		}
+
+		.centered {
+			text-align: center;
+		}
+
+		.lead {
+			font-size: 2rem;
+			line-height: 150%;
+			margin-bottom: 4rem;
+		}
+
+		.transitioner {
+			transition: all 0.3s ease;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="themes.css">
+</head>
+<body>
+
+<section id="theme-bar" class="top-widget clearfix top-widget-open">
+	<div class="container">
+		<h3 class="widget-header">Select theme:</h3>
+
+		<ul class="inline-list" id="theme-list">
+			<li class="inline-item"><a href="#" data-theme="risky" class="selected">Risky</a></li>
+			<li class="inline-item"><a href="#" data-theme="rooftop">Rooftop</a></li>
+			<li class="inline-item"><a href="#" data-theme="specter">Specter</a></li>
+		</ul>
+	</div>
+</section>
+
+<header class="site-header transitioner">
+	<div class="container">
+		<h1 class="h1 centered">Ice Quakes!</h1>
+	</div>
+</header>
+
+<main role="main" class="site-content transitioner">
+	<div class="container">
+		<p class="lead">
+			A cryoseism, also known as an ice quake or a frost quake, may be
+			caused by a sudden cracking action in frozen soil or rock saturated
+			with water or ice. As water drains into ground, it may eventually
+			freeze and expand under colder temperatures, putting stress on its
+			surroundings. This stress builds up until relieved explosively in
+			the form of a cryoseism.
+		</p>
+
+		<p>
+			Another type of cryoseism is a non-tectonic seismic event caused by
+			sudden glacial movements. This movement has been attributed to a
+			veneer of water which may pool underneath a glacier sourced from
+			surface ice melt. Hydraulic pressure of the liquid can act as a
+			lubricant, allowing the glacier to suddenly shift position. This
+			type of cryoseism can be very brief, or may last for several
+			minutes.
+		</p>
+	</div>
+</main>
+
+<footer class="site-footer">
+	<div class="container">
+		<p class="centered">
+			All content via
+			<a href="http://en.wikipedia.org/wiki/Cryoseism">Wikipedia</a>.
+		</p>
+	</div>
+</footer>
+
+</body>
+</html>
