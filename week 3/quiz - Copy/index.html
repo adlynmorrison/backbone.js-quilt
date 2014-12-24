@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ASWM: Quiz #1</title>
+
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.4.1/buttons-min.css">
+  <style type="text/css">
+    *, *:before, *:after {
+      -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+
+    main {
+      width: 680px;
+      padding: 20px;
+      margin: 20px auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      border-radius: 4px;
+      background: #f1f1f1;
+      font: 14px/18px helvetica;
+    }
+
+    main:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    h1 {
+      text-align: center;
+      font: 16px/20px helvetica;
+      color: #555;
+    }
+
+    #left {
+      position: relative;
+      float: left;
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+      margin-right: 40px;
+    }
+
+    #right {
+      float: left;
+      width: 300px;
+    }
+
+    #jordan {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      z-index: 2;
+    }
+
+    button {
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* styles for the things jordan can be passed */
+    .object {
+      position: absolute;
+      z-index: 1;
+      left: -120px;
+      transition: all 0.3s ease;
+    }
+
+    #ball {
+      top: 40px;
+    }
+
+    #ball.active {
+      top: 40px;
+      left: 47px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Quiz #1</h1>
+
+<main role="main">
+  <div id="left">
+    <img src="jordan.png" id="jordan">
+    <img src="ball.png" class="object" id="ball">
+  </div>
+  <div id="right">
+    <button type="button" class="pure-button pure-button-primary" id="pass-ball">Pass the ball!</button>
+  </div>
+</main>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

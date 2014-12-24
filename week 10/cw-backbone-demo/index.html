@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Backbone Model Demo</title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/pure/0.4.2/pure-min.css">
+  <style type="text/css">
+    .clearfix:after {
+      clear: both;
+      content: '';
+      display: table;
+    }
+
+    #video-games {
+      list-style-type: none;
+    }
+
+    .video-game {
+      margin-bottom: 10px;
+    }
+
+    .video-game img {
+      display: block;
+      float: left;
+      margin-right: 10px;
+      width: 150px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+<button id="add-game" type="button">Add Game</button>
+
+<ul id="video-games"></ul>
+
+<script type="text/template" id="videogame-template">
+  <li class="video-game clearfix">
+    <img src="<%= box_art %>">
+    <strong><%= title %></strong>
+    <small><%= publisher %>, <%= release_year %></small>
+    <p>
+      <%= description %>
+    </p>
+    <small>
+      <strong>Platforms:</strong>
+    <% _.each(platforms, function(platform) { %>
+      <%= platform %>,
+    <% }); %>
+    </small>
+  </li>
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<script src="model.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
